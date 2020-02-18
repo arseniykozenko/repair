@@ -1,3 +1,5 @@
+*
+    box-sizing: border-box
 body
     +reg
 img
@@ -22,3 +24,19 @@ img
     font-size: 13px
     border: none
     padding: 18px 30px
+.section
+    padding: 90px 0
+    &-title
+        color: #333333
+        font-size: 24px
+        +bold
+    &-subtitle
+        color: #333333
+        font-size: 16px
+        +reg
+.input
+    border: 1px solid $border-input
+    padding: 20px 26px
+    +reg
+    font-size: 15px
+    border-radius: 10px
