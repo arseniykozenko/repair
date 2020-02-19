@@ -61,6 +61,13 @@ img {
   padding: 18px 30px;
 }
 
+.button:hover {
+  background-color: #ffdb33;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
 .section {
   padding: 90px 0;
 }
@@ -130,13 +137,6 @@ img {
 .navbar__button {
   margin-left: 30px;
   font-weight: 700;
-}
-
-.navbar__button:hover {
-  background-color: #ffdb33;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  cursor: pointer;
 }
 
 .navbar__phone {
@@ -342,6 +342,39 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
+}
+
+.offer-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+}
+
+.offer-text__descr {
+  color: #333333;
+  font-size: 15px;
+  line-height: 24px;
+  max-width: 225px;
+}
+
+.offer-text__call {
+  color: #333333;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.offer__phone {
+  display: block;
+  color: #333333;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
+  text-decoration: none;
 }
 
 @media (max-width: 1200px) {
