@@ -632,6 +632,15 @@ img {
       justify-content: space-around;
 }
 
+@media (max-width: 1200px) {
+  .steps__stage::after {
+    right: -38px;
+  }
+  .stage__descr {
+    font-size: 13px;
+  }
+}
+
 .cheaper {
   padding: 0;
   margin: 0;
@@ -644,7 +653,7 @@ img {
   text-align: center;
   font-family: 'Museo Sans Light', sans-serif;
   font-weight: 300;
-  min-width: 910px;
+  max-width: 910px;
   margin: auto;
   font-size: 32px;
   line-height: 50px;
