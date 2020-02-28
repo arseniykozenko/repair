@@ -634,7 +634,7 @@ img {
 
 @media (max-width: 1200px) {
   .steps__stage::after {
-    right: -38px;
+    content: "";
   }
   .stage__descr {
     font-size: 13px;
