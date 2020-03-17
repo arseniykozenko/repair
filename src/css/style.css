@@ -641,6 +641,30 @@ img {
   }
 }
 
+@media (max-width: 768px) {
+  .steps__stage {
+    margin-right: 15px;
+  }
+  .stage__descr {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 567px) {
+  .stages {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .steps__stage {
+    margin-bottom: 10px;
+  }
+}
+
 .cheaper {
   padding: 0;
   margin: 0;
@@ -657,6 +681,12 @@ img {
   margin: auto;
   font-size: 32px;
   line-height: 50px;
+}
+
+@media (max-width: 567px) {
+  .cheaper__title {
+    font-size: 26px;
+  }
 }
 
 .feature-card {
@@ -738,5 +768,29 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 1200px) {
+  .warranty-card {
+    margin-right: 20px;
+  }
+  .warranty-card__descr {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .warranty-card__descr {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 567px) {
+  .warranty-card__descr {
+    font-size: 15px;
+  }
+  .warranty__title {
+    font-size: 24px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
