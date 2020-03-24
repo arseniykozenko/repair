@@ -3,12 +3,6 @@ var cleanCss = require('gulp-clean-css');
 var htmlmin = require('gulp-htmlmin');
 var tinypng = require('gulp-tinypng-compress');
 
-gulp.task('default', defaultTask);
-
-function defaultTask(done) {
-    done();
-}
-
 gulp.task('minify-css', function(done) {
     return gulp.src('./src/css/*.css')
     .pipe(cleanCss({
@@ -47,3 +41,7 @@ gulp.task('tinypng', function (done) {
     .pipe(gulp.dest('dist/img/'));
     done();
 });
+
+gulp.task('default', gulp.series('minify-css', 'move-js', 'fonts', 'htmlmin', 'tinypng', function(done) {
+    done();
+}));
