@@ -1038,4 +1038,48 @@ img {
           align-items: flex-start;
   margin-bottom: 39px;
 }
+
+.contacts-list__text {
+  max-width: 160px;
+}
+
+.contacts-list__text span {
+  line-height: 26px;
+  color: #000000;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.contacts-list__text_link {
+  line-height: 26px;
+  text-decoration: none;
+  color: #000000;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .map {
+    position: static;
+    width: 100%;
+  }
+  .contacts {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding: 0;
+  }
+  .contacts__title {
+    text-align: center;
+  }
+}
 /*# sourceMappingURL=style.css.map */

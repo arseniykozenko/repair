@@ -30,3 +30,27 @@
             display: flex
             align-items: flex-start
             margin-bottom: 39px
+        &__text
+            max-width: 160px
+            span
+                line-height: 26px
+                color: #000000
+                +bold
+            &_link
+                line-height: 26px
+                text-decoration: none
+                color: #000000
+                +bold
+@media (max-width: 768px)
+    .footer
+        position: static
+        display: flex
+        flex-direction: column-reverse
+    .map
+        position: static
+        width: 100%
+    .contacts
+        flex-basis: 100%
+        padding: 0
+        &__title
+            text-align: center
