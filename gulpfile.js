@@ -7,6 +7,7 @@ var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
+var concat = require('gulp-concat');
 
 gulp.task('sass', function(done) {
     gulp.src('./src/sass/style.sass')
@@ -34,9 +35,6 @@ gulp.task('minify-css', function(done) {
     .pipe(cleanCss({
         compatibility: 'ie8'
     }))
-    .pipe(rename({
-        suffix: '.min'
-    }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('dist/css/'))
     done();
@@ -45,9 +43,7 @@ gulp.task('minify-css', function(done) {
 gulp.task('minify-js', function(done) {
     return gulp.src('./src/js/*.js')
     .pipe(uglify())
-    .pipe(rename({
-        suffix: '.min'
-    }))
+    .pipe(concat('script.js'))
     .pipe(gulp.dest('dist/js/'))
     done();
 });
