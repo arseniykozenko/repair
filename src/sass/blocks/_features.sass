@@ -1,26 +1,47 @@
 .feature
+    &s
+        padding-top: 100px
+        padding-bottom: 140px
     &-card
         background-color: #f7f7f7
         margin-right: 30px
-        max-height: 410px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        max-width: 370px
+        &:last-child
+            margin-right: 0
+        &__img
+            max-width: 370px
         &__descr
             text-align: left
             font-size: 16px
             line-height: 23px
-            max-width: 290px
-            margin-left: 25px
-            margin-bottom: 40px
+            max-width: 300px
+            margin-top: 27px
+            margin-left: 26px
             span
                 +bold
-        &__img
-            height: 260px
-            img
-                height: 260px
-    &s
-        padding: 0
-        margin: 0
-        padding-top: 100px
-        padding-bottom: 140px
-        &-cards
-            display: flex
-            justify-content: space-between
+    &-cards
+        display: flex
+        justify-content: space-between
+@media (max-width: 1200px)
+    .feature
+        &-card
+            max-width: 285px
+            &__img
+                max-width: 285px
+            &s
+                justify-content: center
+@media (max-width: 768px)
+    .feature
+        &-card
+            margin: 0
+            margin-bottom: 30px
+            &:last-child
+                margin-bottom: 0
+            &s
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                align-items: center
