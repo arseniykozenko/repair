@@ -20,6 +20,9 @@ gulp.task('sass', function(done) {
     .pipe(autoprefixer({
         cascade: false
     }))
+    .pipe(rename({
+        suffix: '.min'
+    }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./src/css/'))
     done();
@@ -43,7 +46,7 @@ gulp.task('minify-css', function(done) {
 gulp.task('minify-js', function(done) {
     return gulp.src('./src/js/*.js')
     .pipe(uglify())
-    .pipe(concat('script.js'))
+    .pipe(concat('script.min.js'))
     .pipe(gulp.dest('dist/js/'))
     done();
 });
