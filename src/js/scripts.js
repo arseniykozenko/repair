@@ -33,6 +33,22 @@ $(document).ready(function() {
             userphone: "Введите номер вашего телефона"
         }
     });
+    // Обработка и отправка формы через технологию AJAX
+    $('#offer-form').on('submit', function(event) {
+        event.preventDefault();
+        $.ajax({
+            url: 'mail.php',
+            type: 'POST',
+            data: $(this).serialize(),
+            success: function() {
+                $('.success').addClass('success_active');
+                $('.success-dialog').addClass('wow fadeInUp');
+            },
+            error: function(jqXHR, textStatus) {
+                console.log(jqXHR + ': ' + textStatus);
+            }
+        });
+    });
     // Маска для телефона
     $('.phone').mask('+7 (999) 999-99-99')
     // Слайдер

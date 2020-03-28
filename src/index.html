@@ -87,7 +87,7 @@
                         Оставьте заявку на разработку 
                         бесплатного дизайн-проекта!
                     </span>
-                    <form action="#" class="form offer__form" id="offer-form">
+                    <form class="form offer__form" id="offer-form">
                         <input type="text" name="username" class="input offer__input" placeholder="Ваше имя">
                         <input type="tel" name="userphone" class="input offer__input phone" placeholder="Ваш телефон">
                         <button class="button offer__button" onclick="ym(61239112,'reachGoal','button-primary')">Получить бесплатный дизайн-проект</button>
@@ -422,7 +422,7 @@
                     <div class="form brif__form">
                         <h3 class="form__title">Оставьте заявку на бесплатный расчет ремонта по телефону</h3>
                         <span class="form__subtitle">Для этого заполните форму ниже</span>
-                        <form action="#" id="brif-form">
+                        <form id="brif-form">
                             <input type="text" name="username" class="input brif__input" placeholder="Ваше имя">
                             <input type="tel" name="userphone" class="input brif__input phone" placeholder="Ваш телефон">
                             <button class="button brif__button">Рассчитать стоимость</button>
@@ -486,12 +486,19 @@
         </div>
     </footer>
 
+    <div class="success" id="success-info">
+        <div class="success-dialog">
+            <button class="success-dialog__close" id="success-close">&times;</button>
+            <h3 class="success-dialog__title">Благодарим за заявку! Скоро мы с вами свяжемся</h3>
+        </div>
+    </div>
+
     <div class="modal" id="modal">
         <div class="modal-dialog">
             <button class="modal-dialog__close" id="close">&times;</button>
             <h3 class="modal-dialog__title">Оставьте заявку на бесплатный расчёт ремонта по телефону</h3>
             <span class="modal-dialog__subtitle">Для этого заполните форму ниже</span>
-            <form action="#" id="modal-form">
+            <form id="modal-form">
                 <input type="text" name="username" class="input modal__input" placeholder="Ваше имя">
                 <input type="tel" name="userphone" class="input modal__input phone" placeholder="Ваш телефон">
                 <button class="button modal__button">Рассчитать стоимость</button>
@@ -499,7 +506,7 @@
             </form>
         </div>
     </div>
-
+    
     <script src="js/script.min.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/modal.js"></script>
