@@ -36,6 +36,7 @@ $(document).ready(function() {
     // Обработка и отправка формы с помощью технологии AJAX
     $('#offer-form').on('submit', function(event) {
         event.preventDefault();
+        $('#submit').prop('disabled', true);
         $.ajax({
             url: 'mail.php',
             type: 'POST',
@@ -43,11 +44,64 @@ $(document).ready(function() {
             success: function(data) {
                 $('.success').addClass('success_active');
                 $('.success-dialog').addClass('wow fadeInUp');
+                $(this).find('input').val('');
+                $('#offer-form').trigger('reset');
             },
             error: function(jqXHR, textStatus) {
                 console.log(jqXHR + ': ' + textStatus);
             }
         });
+        return false;
+    });
+    $('#brif-form').on('submit', function(event) {
+        var name = $('#username').val();
+        var phone = $('#userphone').val();
+        event.preventDefault();
+        if(name == "") {
+            return false;
+        } else if (phone == "") {
+            return false;
+        }
+        $.ajax({
+            url: 'mail.php',
+            type: 'POST',
+            data: $(this).serialize(),
+            success: function(data) {
+                $('.success').addClass('success_active');
+                $('.success-dialog').addClass('wow fadeInUp');
+                $(this).find('input').val('');
+                $('#brif-form').trigger('reset');
+            },
+            error: function(jqXHR, textStatus) {
+                console.log(jqXHR + ': ' + textStatus);
+            }
+        });
+        return false;
+    });
+    $('#modal-form').on('submit', function(event) {
+        var name = $('#username').val();
+        var phone = $('#userphone').val();
+        event.preventDefault();
+        if(name == "") {
+            return false;
+        } else if (phone == "") {
+            return false;
+        }
+        $.ajax({
+            url: 'mail.php',
+            type: 'POST',
+            data: $(this).serialize(),
+            success: function(data) {
+                $('.success').addClass('success_active');
+                $('.success-dialog').addClass('wow fadeInUp');
+                $(this).find('input').val('');
+                $('#modal-form').trigger('reset');
+            },
+            error: function(jqXHR, textStatus) {
+                console.log(jqXHR + ': ' + textStatus);
+            }
+        });
+        return false;
     });
     // Маска для телефона
     $('.phone').mask('+7 (999) 999-99-99')
